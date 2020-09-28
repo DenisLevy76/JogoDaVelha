@@ -7,7 +7,7 @@ const jogoDaVelha = {
 
       change(){
 
-         this.turn == 'X' ? this.turn = 'O' : this.turn = 'X'
+         this.turn = this.turn == 'X' ? 'O' : 'X'
 
       },
 
@@ -34,7 +34,6 @@ const jogoDaVelha = {
          if (this.container[element[0]] !== '' && this.container[element[1]] !== '' && this.container[element[2]] !== ''){
 
             if (this.container[element[0]] === this.container[element[1]] && this.container[element[1]] === this.container[element[2]]){
-               document.querySelector('#')
                this.win = true
                
             }
