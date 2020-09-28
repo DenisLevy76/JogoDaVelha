@@ -29,12 +29,12 @@ const jogoDaVelha = {
       ]
 
       
-      winnerSequence.forEach((elemente, index) => {
+      winnerSequence.forEach((element, index) => {
 
-         if (this.container[elemente[0]] !== '' && this.container[elemente[1]] !== '' && this.container[elemente[2]] !== ''){
+         if (this.container[element[0]] !== '' && this.container[element[1]] !== '' && this.container[element[2]] !== ''){
 
-            if (this.container[elemente[0]] === this.container[elemente[1]] && this.container[elemente[1]] === this.container[elemente[2]]){
-
+            if (this.container[element[0]] === this.container[element[1]] && this.container[element[1]] === this.container[element[2]]){
+               document.querySelector('#')
                this.win = true
                
             }
