@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jogo da velha</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header><h1>Jogo da velha</h1></header>
+   <section>
+      <div class="playerTurn"></div>
+      <div class="game">
+
+      </div>
+      
+      <input type="button" class="reset" onclick="jogoDaVelha.reset()" value="Reiniciar">
+   </section>
+   <script src="js/script.js"></script>
+   <script>
+      jogoDaVelha.draw(document.querySelector('.game'))
+   </script>
+</body>
+</html>
