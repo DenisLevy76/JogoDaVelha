@@ -1,6 +1,6 @@
 const jogoDaVelha = {
 
-   container: ['', '', '', '', '', '', '', '', ''],
+   board: ['', '', '', '', '', '', '', '', ''],
    playerTurn: {
       symbols: ['X', 'O'],
       turn: 'O',
@@ -31,9 +31,9 @@ const jogoDaVelha = {
       
       winnerSequence.forEach((element, index) => {
 
-         if (this.container[element[0]] !== '' && this.container[element[1]] !== '' && this.container[element[2]] !== ''){
+         if (this.board[element[0]] !== '' && this.board[element[1]] !== '' && this.board[element[2]] !== ''){
 
-            if (this.container[element[0]] === this.container[element[1]] && this.container[element[1]] === this.container[element[2]]){
+            if (this.board[element[0]] === this.board[element[1]] && this.board[element[1]] === this.board[element[2]]){
                this.win = true
                
             }
@@ -44,7 +44,7 @@ const jogoDaVelha = {
    },
 
    reset(){
-      this.container = ['', '', '', '', '', '', '', '', '']
+      this.board.fill('')
       this.win = false
       this.draw()
    },
@@ -52,8 +52,8 @@ const jogoDaVelha = {
 
    makePlay(id){
 
-      if (this.container[id] === '' && this.win === false){
-         this.container[id] = this.playerTurn.turn
+      if (this.board[id] === '' && this.win === false){
+         this.board[id] = this.playerTurn.turn
 
          this.playerTurn.change()
 
@@ -72,8 +72,9 @@ const jogoDaVelha = {
 
       document.querySelector('.game').innerHTML = ''
       document.querySelector('.playerTurn').innerHTML = `<h3>Vez de: ${this.playerTurn.turn}</h3>`
-      this.container.forEach((element, index, array) => {
-         document.querySelector('.game').innerHTML += `<div class="positions" id"${index} onclick="jogoDaVelha.makePlay(${index})"">${this.container[index]}</div>`
+
+      this.board.forEach((element, index, array) => {
+         document.querySelector('.game').innerHTML += `<div class="positions" id"${index} onclick="jogoDaVelha.makePlay(${index})"">${this.board[index]}</div>`
       })
 
    },
