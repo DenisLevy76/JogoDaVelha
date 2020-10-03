@@ -92,8 +92,8 @@ const jogoDaVelha = {
       document.querySelector('.game').innerHTML = ''
       document.querySelector('.playerTurn').innerHTML = `<h3>Vez de: ${this.playerTurn.turn}</h3>`
 
-      this.board.forEach((element, index, array) => {
-         document.querySelector('.game').innerHTML += `<div class="positions" id="${index}" onmouseover="jogoDaVelha.placeHolder(${index})" onmouseout="jogoDaVelha.placeHolderDel(${index})" onclick="jogoDaVelha.makePlay(${index})"">${this.board[index]}</div>`
+      this.board.forEach((element, index) => {
+         document.querySelector('.game').innerHTML += `<div class="positions" id="${index}" onmouseover="jogoDaVelha.placeHolder(${index})" onmouseout="jogoDaVelha.placeHolderDel(${index})" onclick="jogoDaVelha.makePlay(${index})"">${element}</div>`
       })
 
    },
