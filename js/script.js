@@ -27,7 +27,6 @@ const jogoDaVelha = {
          [0,4,8],
          [6,4,2],
       ]
-
       
       winnerSequence.forEach((element, index) => {
 
@@ -74,7 +73,7 @@ const jogoDaVelha = {
       document.querySelector('.playerTurn').innerHTML = `<h3>Vez de: ${this.playerTurn.turn}</h3>`
 
       this.board.forEach((element, index, array) => {
-         document.querySelector('.game').innerHTML += `<div class="positions" id"${index} onclick="jogoDaVelha.makePlay(${index})"">${this.board[index]}</div>`
+         document.querySelector('.game').innerHTML += `<div class="positions" id="${index}" onclick="jogoDaVelha.makePlay(${index})"">${this.board[index]}</div>`
       })
 
    },
